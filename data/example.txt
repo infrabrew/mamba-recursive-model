@@ -1,0 +1,27 @@
+This is an example training document for the Mamba language model trainer.
+
+The Mamba architecture is a novel approach to sequence modeling that uses selective state space models (SSMs) to achieve linear-time complexity while maintaining the expressiveness of traditional attention mechanisms.
+
+Key features of the Mamba architecture:
+
+1. Linear Time Complexity: Unlike transformers which have O(n²) complexity, Mamba achieves O(n) complexity through selective state space models.
+
+2. Selective Mechanism: The model can selectively focus on relevant information in the sequence, similar to attention but more efficient.
+
+3. Hardware-Efficient: Designed to run efficiently on modern GPUs with optimized CUDA kernels.
+
+4. Strong Performance: Achieves competitive or superior performance compared to transformers on various benchmarks.
+
+Training a Mamba model:
+
+The training process involves feeding sequences of text through the model and optimizing it to predict the next token. The model learns to capture patterns, relationships, and structures in the data through this process.
+
+You can replace this example file with your own training data in formats like:
+- PDF documents
+- Text files
+- Source code
+- Markdown files
+- JSON configuration files
+- And many more!
+
+Simply add your files to the data/ directory and run the training script.

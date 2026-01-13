@@ -1,0 +1,38 @@
+{
+  "model": {
+    "d_model": 512,
+    "n_layers": 8,
+    "d_state": 16,
+    "expand_factor": 2,
+    "dropout": 0.1,
+    "max_seq_len": 512,
+    "vocab_size": 50257,
+    "description": "Small Mamba model optimized for 8GB VRAM",
+    "estimated_params": "~50M"
+  },
+  "vram": {
+    "batch_size": 1,
+    "gradient_accumulation_steps": 16,
+    "max_seq_len": 512,
+    "use_fp16": true,
+    "use_gradient_checkpointing": true,
+    "use_cpu_offload": false,
+    "recommended_models": ["small"],
+    "description": "8GB VRAM configuration (GTX 1080, RTX 2070, etc.)",
+    "effective_batch_size": 16
+  },
+  "training": {
+    "learning_rate": 0.0003,
+    "weight_decay": 0.1,
+    "max_steps": 100000,
+    "warmup_steps": 2000,
+    "eval_interval": 1000,
+    "save_interval": 5000,
+    "logging_steps": 10,
+    "adam_beta1": 0.9,
+    "adam_beta2": 0.95,
+    "adam_epsilon": 1e-08,
+    "max_grad_norm": 1.0,
+    "label_smoothing": 0.0
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "model": {
+    "d_model": 1024,
+    "n_layers": 24,
+    "d_state": 16,
+    "expand_factor": 2,
+    "dropout": 0.1,
+    "max_seq_len": 2048,
+    "vocab_size": 50257,
+    "description": "Large Mamba model for 24GB VRAM",
+    "estimated_params": "~400M"
+  },
+  "vram": {
+    "batch_size": 8,
+    "gradient_accumulation_steps": 2,
+    "max_seq_len": 2048,
+    "use_fp16": true,
+    "use_gradient_checkpointing": false,
+    "use_cpu_offload": false,
+    "recommended_models": ["small", "medium", "large"],
+    "description": "24GB VRAM configuration (RTX 3090, RTX 4090, A5000, etc.)",
+    "effective_batch_size": 16
+  },
+  "training": {
+    "learning_rate": 0.0003,
+    "weight_decay": 0.1,
+    "max_steps": 100000,
+    "warmup_steps": 2000,
+    "eval_interval": 1000,
+    "save_interval": 5000,
+    "logging_steps": 10,
+    "adam_beta1": 0.9,
+    "adam_beta2": 0.95,
+    "adam_epsilon": 1e-08,
+    "max_grad_norm": 1.0,
+    "label_smoothing": 0.0
+  }
+}

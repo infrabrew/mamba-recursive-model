@@ -1,0 +1,16 @@
+# Core dependencies
+torch>=2.0.0
+transformers>=4.30.0
+datasets>=2.14.0
+
+# Data loading
+PyPDF2>=3.0.0
+
+# Training utilities
+tqdm>=4.65.0
+numpy>=1.24.0
+
+# Optional: for advanced features
+# einops>=0.6.1
+# triton>=2.0.0  # For optimized kernels
+# wandb>=0.15.0  # For experiment tracking
