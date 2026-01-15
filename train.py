@@ -349,13 +349,13 @@ class Trainer:
     def load_checkpoint(self, checkpoint_dir: str):
         """Load model checkpoint."""
         # Load model
-        self.model.load_state_dict(torch.load(os.path.join(checkpoint_dir, "model.pt")))
+        self.model.load_state_dict(torch.load(os.path.join(checkpoint_dir, "model.pt"), weights_only=True))
 
         # Load optimizer
-        self.optimizer.load_state_dict(torch.load(os.path.join(checkpoint_dir, "optimizer.pt")))
+        self.optimizer.load_state_dict(torch.load(os.path.join(checkpoint_dir, "optimizer.pt"), weights_only=True))
 
         # Load training state
-        state = torch.load(os.path.join(checkpoint_dir, "training_state.pt"))
+        state = torch.load(os.path.join(checkpoint_dir, "training_state.pt"), weights_only=True)
         self.global_step = state['global_step']
         self.epoch = state['epoch']
 
